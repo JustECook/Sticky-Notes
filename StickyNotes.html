@@ -7,6 +7,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
    
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("images/paperBackground.png");
+            background-repeat: no-repeat;
+        }
 
         .centered {
             display: flex;
@@ -15,26 +21,42 @@
         }
 
         #input {
-            font-size: 24px;
-            font-family: 'Courier New', Courier, monospace;
             width: 375px;
             height: 300px;
-            background-color: rgb(231, 226, 153);
-            word-wrap: normal;
             border: 2px solid black;
+        }
+        .input {
+            background:rgb(231, 226, 153);
+            font-family: 'Courier New', Courier, monospace;
+            width: 98.5%;
+            height: 98%;
         }
 
         .larger-font {
-            font-size: 30px;
+            font-size: 34px;
         }
 
-        .smaller-font {font-size: 18px;
+        .normal-font {
+            font-size: 24px;
+        }
+        .small-button {
+            height: 20px;
+            width: auto;
         }
 
-        #sticky-note {
-            margin: 10px;
+        .smaller-font {
+            font-size: 18px;
         }
 
+        .spaced {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+       #sticky-note {
+        margin-top: 5%;
+        margin-left: 10%;
+       }
         #title {
             height: 36px;
             width: 375px;
@@ -44,6 +66,11 @@
 
         .title {
             font-weight: bold;
+            width: 65%;
+            background: darkkhaki;
+            font-size: 22px;
+            text-transform: uppercase;
+            border: none;
         }
     </style>
   
@@ -51,26 +78,61 @@
 <body>
     
     <div id = "sticky-note">
-        <div id = "title" class = "centered">
-            <h3 class = "title">Title</h3>
+        <div id = "title" class = "centered spaced">
+              <input type = "text" class = "title" placeholder = "Add Title" maxlength = "16">
+              <img id = "smaller-font" class = "small-button" src = "images/lowercaseA.png">
+              <img id = "larger-font" class = "small-button" src = "images/uppercaseA.png">
+              <img id = "add-sticky" class = "small-button" src = "images/plusSign.png">
+              
         </div>
         <div>
-            <div id = "input"></div>
+            <div id = "input">
+                <textarea id = "text-area" class = "input normal-font" placeholder = "Enter your notes here"></textarea>
+            </div>
         </div>
     </div>
 
     <script>
+        let addStickyBtn = document.querySelector("#add-sticky");
         let stickyNote = document.querySelector("#sticky-note");
 
+        let biggerFontBtn = document.querySelector("#larger-font");
+        let smallerFontBtn = document.querySelector("#smaller-font");
+
+        let textArea = document.querySelector("#text-area");
+        /*
+        let numOfNotes = 1;
+
         function newSticky() {
+        
         let clone = stickyNote.cloneNode(true);
         clone.id = "sticky-note";
-        stickyNote.after(clone);
+        clone.style.marginLeft = "450px";
+        clone.style.marginTop = "-343px";
+        stickyNote.appendChild(clone);
+        numOfNotes += 1;
+
+            if (numOfNotes === 2) {
+                 addStickyBtn.removeEventListener("click", newSticky);
+            }
         }
-
-
-        stickyNote.addEventListener("click", newSticky);
+        */
+        function increaseFontSize() {
+            textArea.className = "";
+            textArea.className = "larger-font input";
+        }
         
+        function decreaseFontSize() {
+            textArea.className = "smaller-font input";
+        }
+        //addSticky.addEventListener("click", newSticky);
+
+        biggerFontBtn.addEventListener("click", increaseFontSize);
+        smallerFontBtn.addEventListener("click", decreaseFontSize);
+    
+
+      
+
     </script>
 </body>
 </html>
