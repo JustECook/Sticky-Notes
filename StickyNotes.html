@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sticky Notes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+    <style>
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #input {
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            width: 375px;
+            height: 300px;
+            background-color: rgb(231, 226, 153);
+            word-wrap: normal;
+            border: 2px solid black;
+        }
+
+        .larger-font {
+            font-size: 30px;
+        }
+
+        .smaller-font {font-size: 18px;
+        }
+
+        #sticky-note {
+            margin: 10px;
+        }
+
+        #title {
+            height: 36px;
+            width: 375px;
+            background-color: darkkhaki;
+            border: 2px solid black;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+    </style>
+  
+</head>
+<body>
+    
+    <div id = "sticky-note">
+        <div id = "title" class = "centered">
+            <h3 class = "title">Title</h3>
+        </div>
+        <div>
+            <div id = "input"></div>
+        </div>
+    </div>
+
+    <script>
+        let stickyNote = document.querySelector("#sticky-note");
+
+        function newSticky() {
+        let clone = stickyNote.cloneNode(true);
+        clone.id = "sticky-note";
+        stickyNote.after(clone);
+        }
+
+
+        stickyNote.addEventListener("click", newSticky);
+        
+    </script>
+</body>
+</html>
