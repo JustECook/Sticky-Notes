@@ -7,7 +7,7 @@ Updates:
 
 Future Upgrades:
 
-Set limits on how large or small fonts can be. 
+1. Set limits on how large or small fonts can be. 
 
 Potential upgrades:
 1. Options to change sticky note colors
