@@ -17,3 +17,5 @@ Potential upgrades:
 
 Notes:
 Code to add a new sticky notes exists but has been commented out. Currently not working as intended.
+
+Also, will eventually move CSS to external stylesheet
