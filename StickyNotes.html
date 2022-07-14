@@ -169,21 +169,26 @@
         */
         let size = 24;
         function increaseFontSize() {
-            
+            if (size < 36) {
             textArea.style.fontSize = size + 6 + "px";
             size += 6;
+            } else {
+                textArea.style.fontSize = "36px";
+            }   
         }
         
         function decreaseFontSize() {
+            if (size > 12) {
             textArea.style.fontSize = size - 6 + "px";
             size -= 6;
+            } else {
+                textArea.style.fontSize = "12px";
+            }
         }
+        
         //addSticky.addEventListener("click", newSticky);
         biggerFontBtn.addEventListener("click", increaseFontSize);
         smallerFontBtn.addEventListener("click", decreaseFontSize);
-    
-
-      
 
     </script>
 </body>
