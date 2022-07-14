@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
    
     <style>
+        
         body {
             margin: 0;
             padding: 0;
@@ -33,7 +34,7 @@
         }
 
         .larger-font {
-            font-size: 34px;
+            font-size: 30px;
         }
 
         .normal-font {
@@ -117,13 +118,17 @@
             }
         }
         */
+        let size = 24;
         function increaseFontSize() {
-            textArea.className = "";
-            textArea.className = "larger-font input";
+            
+            textArea.style.fontSize = size + 6 + "px";
+            size += 6;
+            
         }
         
         function decreaseFontSize() {
-            textArea.className = "smaller-font input";
+            textArea.style.fontSize = size - 6 + "px";
+            size -= 6;
         }
         //addSticky.addEventListener("click", newSticky);
 
