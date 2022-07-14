@@ -3,11 +3,8 @@ An app used to generate sticky notes. Sometimes the best ideas come when least e
 
 Updates:
 1. Added total of three background options. Background 2 is on by default. Users can click icons in top left corner to choose. Border appears around selected background
-2. Removed ability to resize sticky note  
-
-Future Upgrades:
-
-1. Set limits on how large or small fonts can be. 
+2. Removed ability to resize sticky note
+3. Set limits on how large or small fonts can be. Maximum font size is 36px. Minimum font size is 12px.
 
 Potential upgrades:
 1. Options to change sticky note colors
