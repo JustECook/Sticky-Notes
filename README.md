@@ -2,10 +2,10 @@
 An app used to generate sticky notes. Sometimes the best ideas come when least expected. Use a sticky to jot down those 'Eureka' moments.
 
 Updates:
-1. 'larger/smaller' font size buttons now change size by 6px...infinitely (see future upgrades)
+'larger/smaller' font size buttons now change size by 6px...infinitely (see future upgrades)
 
 Future Upgrades:
-1. Set limits on how large or small fonts can be. 
+Set limits on how large or small fonts can be. 
 
 Potential upgrades:
 1. Options to change background
