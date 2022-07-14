@@ -6,6 +6,7 @@ Updates:
 2. Removed ability to resize sticky note  
 
 Future Upgrades:
+
 Set limits on how large or small fonts can be. 
 
 Potential upgrades:
